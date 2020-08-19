@@ -1,0 +1,1 @@
+/Users/jack_luo/wangyu/Template/buildSrc/build/classes/kotlin/main/App.class:/Users/jack_luo/wangyu/Template/buildSrc/build/classes/kotlin/main/Libs.class:/Users/jack_luo/wangyu/Template/buildSrc/build/classes/kotlin/main/Versions.class

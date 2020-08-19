@@ -6,7 +6,9 @@ import java.util.concurrent.TimeUnit
 import android.Manifest
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.template.module_common.base.BaseVmActivity
+import com.template.module_common.utils.MetaDataUtils
 import com.template.module_common.utils.PrefUtils
 import com.template.module_common.utils.StatusUtils
 import com.template.module_common.widget.DialogUtils
@@ -57,6 +59,8 @@ class SplashActivity : BaseVmActivity(), EasyPermissions.PermissionCallbacks {
             .subscribe {
 //                startActivity(Intent(this,MainActivity::class.java))
 //                finish()
+
+                Log.e("www","1=${MetaDataUtils.getAppMetaData(MetaDataUtils.QQ_APPID)}=2=${MetaDataUtils.getAppMetaData(MetaDataUtils.WECHAT_APPID)}")
             }
     }
 
