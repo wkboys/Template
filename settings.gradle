@@ -1,0 +1,4 @@
+include ':module_main'
+include ':module_common'
+include ':app'
+rootProject.name = "Template"

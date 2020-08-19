@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.template.module_common">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+        <!--微信开放平台-->
+        <meta-data
+            android:name="WECHAT_APPID"
+            android:value="${WECHAT_APPID}" />
+        <meta-data
+            android:name="WECHAT_APPKEY"
+            android:value="${WECHAT_APPKEY}" />
+
+        <!--腾讯开放平台-->
+        <meta-data
+            android:name="QQ_APPID"
+            android:value="${QQ_APPID}" />
+        <meta-data
+            android:name="QQ_APPKEY"
+            android:value="${QQ_APPKEY}" />
+    </application>
+</manifest>

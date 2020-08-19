@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.COMPILE_SDK_VERSION
+
+    defaultConfig {
+        applicationId "com.template.wk"
+        minSdkVersion rootProject.ext.MIN_SDK_VERSION
+        targetSdkVersion rootProject.ext.TARGET_SDK_VERSION
+        versionCode rootProject.ext.android.version_code
+        versionName rootProject.ext.android.version_name
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+        multiDexEnabled true
+        manifestPlaceholders = [
+                PACKAGE_NAME     : applicationId,
+//                微信开放平台
+                WECHAT_APPID     : rootProject.ext.android.wx_AppId,
+                WECHAT_APPKEY    : rootProject.ext.android.wx_AppSecret,
+//                腾讯开放平台
+                QQ_APPID         : "wk_"+rootProject.ext.android.QQ_APPID,
+                QQ_APPKEY        : rootProject.ext.android.QQ_APPKEY,
+                QQ_SCHEME        : rootProject.ext.android.QQ_SCHEME,
+        ]
+        productFlavors {
+            produce {
+                applicationIdSuffix ".${rootProject.ext.android.appId}"
+                resValue "string", "app_name", "${rootProject.ext.android.app_name}"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(':module_common')
+    if (!isModule.toBoolean()) {
+        implementation project(':module_main')
+    }
+}
