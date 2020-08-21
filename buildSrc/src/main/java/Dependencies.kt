@@ -44,7 +44,8 @@
         val glide_transformations= "4.1.0"
         val material= "1.2.0-alpha05"
         val constraintlayout= "1.1.3"
-
+        val xlog =  "1.6.1"
+        val room="2.2.5"
     }
 
 
@@ -101,5 +102,8 @@
         val glide="com.github.bumptech.glide:glide:${Versions.glide}"
         val glide_transformations= "jp.wasabeef:glide-transformations:${Versions.glide_transformations}"
         val material= "com.google.android.material:material:${Versions.material}"
+        val xlog =  "com.elvishew:xlog:${Versions.xlog}"
+        val room_runtime="androidx.room:room-runtime:${Versions.room}"
+        val room_compiler="androidx.room:room-compiler:${Versions.room}"
     }
 

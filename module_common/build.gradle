@@ -83,4 +83,7 @@ dependencies {
     api Libs.glide
     api Libs.glide_transformations
     api Libs.material
+    api Libs.xlog
+    api Libs.room_compiler
+    api Libs.room_runtime
 }
