@@ -57,10 +57,9 @@ class SplashActivity : BaseVmActivity(), EasyPermissions.PermissionCallbacks {
 //        PlayerManager.instance.init(this)
         disposable = Observable.timer(2000,TimeUnit.MILLISECONDS)
             .subscribe {
-//                startActivity(Intent(this,MainActivity::class.java))
-//                finish()
-
-                Log.e("www","1=${MetaDataUtils.getAppMetaData(MetaDataUtils.QQ_APPID)}=2=${MetaDataUtils.getAppMetaData(MetaDataUtils.WECHAT_APPID)}")
+                startActivity(Intent(this,MainActivity::class.java))
+                finish()
+//                Log.e("www","1=${MetaDataUtils.getAppMetaData(MetaDataUtils.QQ_APPID)}=2=${MetaDataUtils.getAppMetaData(MetaDataUtils.WECHAT_APPID)}")
             }
     }
 
