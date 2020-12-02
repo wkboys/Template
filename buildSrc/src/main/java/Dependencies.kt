@@ -46,6 +46,9 @@
         val constraintlayout= "1.1.3"
         val xlog =  "1.6.1"
         val room="2.2.5"
+        val navigation="2.3.0"
+        val kotlin_stdlib="1.3.72"
+        val databinding="4.0.0"
     }
 
 
@@ -105,5 +108,12 @@
         val xlog =  "com.elvishew:xlog:${Versions.xlog}"
         val room_runtime="androidx.room:room-runtime:${Versions.room}"
         val room_compiler="androidx.room:room-compiler:${Versions.room}"
+        //navigation
+        val navigation_fragment="androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+        val navigation_ui="androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+
+        val kotlin_stdlib="org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin_stdlib}"
+        val databinding=  "com.android.databinding:compiler:${Versions.databinding}"
+
     }
 

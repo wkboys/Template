@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion Versions.compileSdkVersion
@@ -31,8 +32,14 @@ android {
                 resValue "string", "app_name", "${App.Name}"
             }
         }
-    }
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
 
+    }
+    dataBinding {
+        enabled = true
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -49,7 +56,10 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(':module_common')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     if (!isModule.toBoolean()) {
-        implementation project(':module_main')
+//        implementation project(':module_main')
     }
+
 }

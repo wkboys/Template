@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/main_fragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.template.fragment.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_main_fragment_to_home_fragment"
+            app:destination="@+id/home_fragment"/>
+
+        <action
+            android:id="@+id/action_main_fragment_to_mid_fragment"
+            app:destination="@+id/mid_fragment" />
+
+        <action
+            android:id="@+id/action_main_fragment_to_set_fragment"
+            app:destination="@+id/set_fragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.template.fragment.HomeFragment"
+        android:label="PlayerFragment"
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mid_fragment"
+        android:name="com.template.fragment.MidFragment"
+        android:label="PublishFragment"
+        tools:layout="@layout/fragment_mid" />
+
+    <fragment
+        android:id="@+id/set_fragment"
+        android:name="com.template.fragment.SetFragment"
+        android:label="SetFragment"
+        tools:layout="@layout/fragment_set">
+
+    </fragment>
+
+
+</navigation>
