@@ -17,7 +17,8 @@
 
         <action
             android:id="@+id/action_main_fragment_to_mid_fragment"
-            app:destination="@+id/mid_fragment" />
+            app:destination="@+id/mid_fragment"
+            />
 
         <action
             android:id="@+id/action_main_fragment_to_set_fragment"

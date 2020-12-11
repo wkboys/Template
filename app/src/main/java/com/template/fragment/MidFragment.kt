@@ -1,20 +1,16 @@
 package com.template.fragment
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.annotation.SuppressLint
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.template.mid.MidVM
 import com.template.module_common.base.DataBindingConfig
-import com.template.set.SetVM
+import com.template.vm.TimerViewModel
+import com.template.vm.TimerWithLiveDataViewModel
 import com.template.wk.BR
 import com.template.wk.R
-import com.zs.base_library.base.BaseVmFragment
 import com.zs.base_library.base.LazyVmFragment
+import kotlinx.android.synthetic.main.fragment_mid.*
 
 /**
  * A fragment representing a list of Items.
@@ -36,5 +32,30 @@ class MidFragment : LazyVmFragment() {
     override fun getDataBindingConfig(): DataBindingConfig? {
         return DataBindingConfig(R.layout.fragment_mid, midVM)
             .addBindingParam(BR._all, midVM)
+    }
+
+    override fun initView() {
+        super.initView()
+     /*   var timerViewModel:TimerViewModel = ViewModelProvider(this).get(TimerViewModel::class.java)
+        timerViewModel.setonTimeChangeListener(object :TimerViewModel.onTimeChangeListener{
+            @SuppressLint("SetTextI18n")
+            override fun onTimeChanged(second: Int) {
+                activity?.runOnUiThread { tv_mid.text = "Time: $second" }
+            }
+        })
+        timerViewModel.startTiming()*/
+
+        var timerWithLiveDataViewModel:TimerWithLiveDataViewModel=ViewModelProvider(this).get(TimerWithLiveDataViewModel::class.java)
+        val liveData = timerWithLiveDataViewModel.getCurrentSecond()
+        liveData!!.observe(this,object : Observer<Int> {
+            override fun onChanged(t: Int?) {
+                tv_mid.text= "Time: $t"
+            }
+        })
+        rest_time.setOnClickListener {
+            liveData.value=0
+        }
+        timerWithLiveDataViewModel.startTiming()
+
     }
 }

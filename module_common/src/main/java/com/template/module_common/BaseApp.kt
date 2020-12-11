@@ -16,7 +16,7 @@ open class BaseApp :Application() {
     }
 
     companion object{
-        private lateinit var baseApplication:BaseApp
+        lateinit var baseApplication:BaseApp
 
         fun getContext(): Context {
             return baseApplication

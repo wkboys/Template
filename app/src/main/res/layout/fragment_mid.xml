@@ -12,7 +12,7 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/item_number"
+        android:id="@+id/tv_mid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
@@ -20,11 +20,12 @@
         android:text="MId"
         />
 
-    <TextView
-        android:id="@+id/content"
+    <Button
+        android:id="@+id/rest_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
+        android:text="rest_time"
         android:textAppearance="?attr/textAppearanceListItem" />
 </LinearLayout>
 </layout>

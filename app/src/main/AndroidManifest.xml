@@ -43,6 +43,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.template.activity.MainActivity"></activity>
+        <service android:name="com.template.service.MyService"></service>
     </application>
 
 
