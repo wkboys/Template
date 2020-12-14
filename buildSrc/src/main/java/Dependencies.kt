@@ -73,7 +73,7 @@
     object Libs {
         val junit = "junit:junit:4.12"
         val runner = "com.android.support.test:runner:1.0.2"
-        val kotlin= "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin_version}"
+//        val kotlin= "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin_version}"
         val constraint_layout ="com.android.support.constraint:constraint-layout:${Versions.constraint}"
         val support_annotations ="com.android.support:support-annotations:${Versions.support_lib}"
         val support_appcompat_v7 ="com.android.support:appcompat-v7:${Versions.support_lib}"
@@ -98,6 +98,7 @@
         // viewModel
         val viewmodel= "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewmodel}"
         val extensions="androidx.lifecycle:lifecycle-extensions:${Versions.extensions}"
+        val life_compiler="android.arch.lifecycle:compiler:${Versions.extensions}"
         val easypermissions="pub.devrel:easypermissions:${Versions.easypermissions}"
         val viewpager2="androidx.viewpager2:viewpager2:${Versions.viewpager2}"
         val SmartRefreshHeader="com.scwang.smartrefresh:SmartRefreshHeader:${Versions.SmartRefreshHeader}"
@@ -112,7 +113,7 @@
         val navigation_fragment="androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
         val navigation_ui="androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
-        val kotlin_stdlib="org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin_stdlib}"
+//        val kotlin_stdlib="org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin_stdlib}"
         val databinding=  "com.android.databinding:compiler:${Versions.databinding}"
 
     }

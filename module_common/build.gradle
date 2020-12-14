@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
+
 
 android {
     compileSdkVersion Versions.compileSdkVersion
@@ -49,19 +49,17 @@ android {
 
 }
 
-kapt {
-    generateStubs = true
-}
+
 
 dependencies {
     api fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleCompatible
-    api Libs.support_appcompat_v7
-    api Libs.junit
-    api Libs.runner
-    api Libs.kotlin
-    api Libs.espresso
-    api Libs.constraint_layout
+//    api Libs.support_appcompat_v7
+//    api Libs.junit
+//    api Libs.runner
+//    api Libs.kotlin
+//    api Libs.espresso
+//    api Libs.constraint_layout
 
     api Libs.gson
     //EventBus
@@ -95,10 +93,11 @@ dependencies {
     api Libs.glide_transformations
     api Libs.material
     api Libs.xlog
-    api Libs.room_compiler
-    api Libs.room_runtime
+//    kapt Libs.room_compiler
+//    api Libs.room_runtime
     api Libs.navigation_fragment
     api Libs.navigation_ui
-    api Libs.kotlin_stdlib
-    kapt Libs.databinding
+//    api Libs.kotlin_stdlib
+//    kapt Libs.databinding
+//    kapt Libs.life_compiler
 }

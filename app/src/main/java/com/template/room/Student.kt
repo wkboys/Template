@@ -8,10 +8,10 @@ import androidx.room.PrimaryKey
 data class Student(
 
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id",typeAffinity = ColumnInfo.INTEGER)
-    val id:Int,
+    @ColumnInfo(name = "id")
+    var id:Int,
 
-    @ColumnInfo(name = "name",typeAffinity = ColumnInfo.TEXT)
-    val name:String
+    @ColumnInfo(name = "name")
+    var name:String
 
 )

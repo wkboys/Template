@@ -51,11 +51,11 @@ class HomeFragment : LazyVmFragment() {
             val stopService = activity?.stopService(intent)
 
         }
-        var student: Student= Student(0,"学生")
+        var student: Student= Student(4,"学生")
         var myDatabase: MyDatabase = MyDatabase.getDBInstace()
-        myDatabase.getStudentDao().insertStudent(student)
+        myDatabase.getStudentDao().deleteStudent(student)
         val studentList = myDatabase.getStudentDao().getStudentList()
-
+        Log.e("","")
     }
 
     override fun getLayoutId() = R.layout.fragment_home

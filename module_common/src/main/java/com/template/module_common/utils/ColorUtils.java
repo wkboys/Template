@@ -5,7 +5,7 @@ import android.text.TextUtils;
 
 import androidx.core.content.ContextCompat;
 
-import com.template.module_common.base.BaseApplication;
+import com.template.module_common.BaseApp;
 
 
 /**
@@ -56,7 +56,7 @@ public class ColorUtils {
      * @return
      */
     public static int parseColor(int color) {
-        return ContextCompat.getColor(BaseApplication.Companion.getContext(),color);
+        return ContextCompat.getColor(BaseApp.baseApplication,color);
     }
 
     /**
