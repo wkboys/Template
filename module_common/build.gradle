@@ -100,4 +100,5 @@ dependencies {
 //    api Libs.kotlin_stdlib
 //    kapt Libs.databinding
 //    kapt Libs.life_compiler
+    api Libs.work_runtime
 }
