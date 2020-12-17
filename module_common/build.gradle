@@ -101,4 +101,6 @@ dependencies {
 //    kapt Libs.databinding
 //    kapt Libs.life_compiler
     api Libs.work_runtime
+    api Libs.picasso
+    api Libs.recyclerview
 }

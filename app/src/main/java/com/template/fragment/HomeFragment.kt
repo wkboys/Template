@@ -10,6 +10,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.work.*
+import com.template.activity.DataBindActivity
 import com.template.service.MyService
 import com.template.home.HomeVM
 import com.template.listener.MyLocationListener
@@ -61,6 +62,11 @@ class HomeFragment : LazyVmFragment() {
             var intent:Intent=Intent(activity,MyService().javaClass)
             val stopService = activity?.stopService(intent)
 
+        }
+        jimp_btn.setOnClickListener {
+//            nav().navigate(R.id.action_home_fragment_to_databind_fragment)
+            val intent = Intent(context, DataBindActivity::class.java)
+            startActivity(intent)
         }
 //        var student: Student= Student(4,"学生")
 //        var myDatabase: MyDatabase = MyDatabase.getDBInstace()

@@ -50,6 +50,8 @@
         val kotlin_stdlib="1.3.72"
         val databinding="4.0.0"
         val work_runtime="2.2.0"
+        val picasso="2.71828"
+        val recyclerview="1.0.0"
     }
 
 
@@ -117,5 +119,7 @@
 //        val kotlin_stdlib="org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin_stdlib}"
         val databinding=  "com.android.databinding:compiler:${Versions.databinding}"
         val work_runtime ="androidx.work:work-runtime:${Versions.work_runtime}"
+        val picasso="com.squareup.picasso:picasso:${Versions.picasso}"
+        val recyclerview="androidx.recyclerview:recyclerview:${Versions.recyclerview}"
     }
 

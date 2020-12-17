@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_main_fragment_to_set_fragment"
             app:destination="@+id/set_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_databind_fragment"
+            app:destination="@+id/databind_fragment" />
 
     </fragment>
 
@@ -32,7 +35,9 @@
         android:name="com.template.fragment.HomeFragment"
         android:label="PlayerFragment"
         tools:layout="@layout/fragment_home">
-
+        <action
+            android:id="@+id/action_home_fragment_to_databind_fragment"
+            app:destination="@+id/databind_fragment" />
     </fragment>
 
     <fragment
@@ -46,6 +51,14 @@
         android:name="com.template.fragment.SetFragment"
         android:label="SetFragment"
         tools:layout="@layout/fragment_set">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/databind_fragment"
+        android:name="com.template.fragment.DataBindingFragment"
+        android:label="DataBindFragment"
+        tools:layout="@layout/fragment_databind">
 
     </fragment>
 

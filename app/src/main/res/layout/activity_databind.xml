@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="book"
+            type="com.template.databind.Book" />
+        <variable
+            name="EventHandler"
+            type="com.template.databind.EventHandleListener" />
+        <variable
+            name="ClickHandler"
+            type="com.template.activity.DataBindActivity.ClickHandler" />
+        <import
+            type="com.template.databind.BookRatingUtil"/>
+        <variable
+            name="networkImage"
+            type="String" />
+        <variable
+            name="imageload"
+            type="com.template.databind.ImageViewBingdingAdapter" />
+        <variable
+            name="localImage"
+            type="int" />
+        <variable
+            name="imagePadding"
+            type="int" />
+        <variable
+            name="viewModel"
+            type="com.template.databind.TwoWayBindingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@{book.title}" />
+        <TextView
+            android:id="@+id/tvTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@{BookRatingUtil.getRatingString(book.rating)}" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按钮"
+            android:onClick="@{EventHandler.onButtonClicked}"
+            />
+        <ImageView
+            android:id="@+id/iv"
+            app:image="@{networkImage}"
+            app:defaultImageResource="@{localImage}"
+            android:layout_height="150dp"
+            android:layout_width="150dp"
+            app:padding="@{imagePadding}"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="change padding"
+            android:onClick="@{ClickHandler.onClicked}"
+            />
+        <EditText
+            android:text="@={viewModel.userName}"
+            android:layout_width="180dp"
+            android:layout_height="80dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen300"/>
+        <include layout="@layout/activity_databind_second"
+            app:book="@{book}"/>
+    </LinearLayout>
+</layout>

@@ -9,7 +9,7 @@
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/start_btn"
@@ -26,6 +26,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
         android:text="stop"
+        android:textAppearance="?attr/textAppearanceListItem" />
+    <Button
+        android:id="@+id/jimp_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="jump"
         android:textAppearance="?attr/textAppearanceListItem" />
 </LinearLayout>
 </layout>
