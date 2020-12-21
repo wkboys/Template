@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.work.*
 import com.template.activity.DataBindActivity
+import com.template.activity.PagingActivity
 import com.template.service.MyService
 import com.template.home.HomeVM
 import com.template.listener.MyLocationListener
@@ -66,6 +67,10 @@ class HomeFragment : LazyVmFragment() {
         jimp_btn.setOnClickListener {
 //            nav().navigate(R.id.action_home_fragment_to_databind_fragment)
             val intent = Intent(context, DataBindActivity::class.java)
+            startActivity(intent)
+        }
+        paging_btn.setOnClickListener {
+            val intent = Intent(context, PagingActivity::class.java)
             startActivity(intent)
         }
 //        var student: Student= Student(4,"学生")

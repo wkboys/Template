@@ -103,4 +103,7 @@ dependencies {
     api Libs.work_runtime
     api Libs.picasso
     api Libs.recyclerview
+    api Libs.retrofit
+    api Libs.converter
+    api Libs.paging
 }

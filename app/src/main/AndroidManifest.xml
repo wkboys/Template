@@ -45,6 +45,7 @@
         <activity android:name="com.template.activity.MainActivity"></activity>
         <service android:name="com.template.service.MyService"></service>
         <activity android:name="com.template.activity.DataBindActivity"></activity>
+        <activity android:name="com.template.activity.PagingActivity"></activity>
     </application>
 
 

@@ -52,6 +52,9 @@
         val work_runtime="2.2.0"
         val picasso="2.71828"
         val recyclerview="1.0.0"
+        val retrofit="2.6.2"
+        val converter="2.4.0"
+        val paging="2.1.0"
     }
 
 
@@ -121,5 +124,9 @@
         val work_runtime ="androidx.work:work-runtime:${Versions.work_runtime}"
         val picasso="com.squareup.picasso:picasso:${Versions.picasso}"
         val recyclerview="androidx.recyclerview:recyclerview:${Versions.recyclerview}"
+
+        val retrofit="com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+        val converter="com.squareup.retrofit2:converter-gson:${Versions.converter}"
+        val paging="androidx.paging:paging-runtime:${Versions.paging}"
     }
 
