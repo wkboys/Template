@@ -10,6 +10,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.work.*
+import com.template.activity.BoundaryActivity
 import com.template.activity.DataBindActivity
 import com.template.activity.PagingActivity
 import com.template.service.MyService
@@ -73,6 +74,11 @@ class HomeFragment : LazyVmFragment() {
             val intent = Intent(context, PagingActivity::class.java)
             startActivity(intent)
         }
+        boundary_btn.setOnClickListener {
+            val intent = Intent(context, BoundaryActivity::class.java)
+            startActivity(intent)
+        }
+
 //        var student: Student= Student(4,"学生")
 //        var myDatabase: MyDatabase = MyDatabase.getDBInstace()
 //        myDatabase.getStudentDao().insertStudent(student)

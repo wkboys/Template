@@ -41,5 +41,12 @@
         android:layout_margin="@dimen/text_margin"
         android:text="paging"
         android:textAppearance="?attr/textAppearanceListItem" />
+    <Button
+        android:id="@+id/boundary_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="boundary"
+        android:textAppearance="?attr/textAppearanceListItem" />
 </LinearLayout>
 </layout>
