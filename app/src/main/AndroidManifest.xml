@@ -47,6 +47,7 @@
         <activity android:name="com.template.activity.DataBindActivity"></activity>
         <activity android:name="com.template.activity.PagingActivity"></activity>
         <activity android:name="com.template.activity.BoundaryActivity"></activity>
+        <activity android:name="com.template.activity.MvvmActivity"></activity>
     </application>
 
 

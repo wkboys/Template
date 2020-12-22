@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.work.*
 import com.template.activity.BoundaryActivity
 import com.template.activity.DataBindActivity
+import com.template.activity.MvvmActivity
 import com.template.activity.PagingActivity
 import com.template.service.MyService
 import com.template.home.HomeVM
@@ -76,6 +77,10 @@ class HomeFragment : LazyVmFragment() {
         }
         boundary_btn.setOnClickListener {
             val intent = Intent(context, BoundaryActivity::class.java)
+            startActivity(intent)
+        }
+        mvvm_btn.setOnClickListener {
+            val intent = Intent(context, MvvmActivity::class.java)
             startActivity(intent)
         }
 
