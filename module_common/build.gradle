@@ -106,4 +106,7 @@ dependencies {
     api Libs.retrofit
     api Libs.converter
     api Libs.paging
+
+    api Libs.coroutines_core
+    api Libs.coroutines_android
 }

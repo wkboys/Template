@@ -55,6 +55,8 @@
         val retrofit="2.6.2"
         val converter="2.4.0"
         val paging="2.1.0"
+        val coroutines_core="1.4.2"
+        val coroutines_android="1.4.2"
     }
 
 
@@ -128,5 +130,9 @@
         val retrofit="com.squareup.retrofit2:retrofit:${Versions.retrofit}"
         val converter="com.squareup.retrofit2:converter-gson:${Versions.converter}"
         val paging="androidx.paging:paging-runtime:${Versions.paging}"
+
+        val coroutines_core="org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines_core}"
+        val coroutines_android="org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines_android}"
+
     }
 

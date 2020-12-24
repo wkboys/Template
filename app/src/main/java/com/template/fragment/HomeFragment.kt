@@ -10,10 +10,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.work.*
-import com.template.activity.BoundaryActivity
-import com.template.activity.DataBindActivity
-import com.template.activity.MvvmActivity
-import com.template.activity.PagingActivity
+import com.template.activity.*
 import com.template.service.MyService
 import com.template.home.HomeVM
 import com.template.listener.MyLocationListener
@@ -81,6 +78,10 @@ class HomeFragment : LazyVmFragment() {
         }
         mvvm_btn.setOnClickListener {
             val intent = Intent(context, MvvmActivity::class.java)
+            startActivity(intent)
+        }
+        coroutines_btn.setOnClickListener {
+            val intent = Intent(context, CoroutinesActivity::class.java)
             startActivity(intent)
         }
 
